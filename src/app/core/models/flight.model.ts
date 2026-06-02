@@ -1,0 +1,25 @@
+export type FlightStatus = 'Active' | 'Delayed' | 'Arrived';
+
+export interface Flight {
+  id: number;
+  flightNumber: string;
+  callsign: string;
+  aircraftType: string;
+
+  origin: string;
+  destination: string;
+
+  originLat: number;
+  originLng: number;
+
+  destinationLat: number;
+  destinationLng: number;
+
+  currentLat: number;
+  currentLng: number;
+
+  status: FlightStatus;
+
+  etd: string;
+  eta: string;
+}

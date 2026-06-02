@@ -1,0 +1,113 @@
+<div class="filter-card">
+
+  <h3>Flight Filters</h3>
+
+  <form
+    [formGroup]="filterForm">
+
+    <div class="form-group">
+
+      <label>
+        Callsign
+      </label>
+
+      <input
+        type="text"
+        placeholder="Search Callsign"
+        formControlName="callsign">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>Status</label>
+
+      <select
+        formControlName="status">
+
+        <option value="">
+          All Statuses
+        </option>
+
+        <option value="Active">
+          Active
+        </option>
+
+        <option value="Delayed">
+          Delayed
+        </option>
+
+        <option value="Arrived">
+          Arrived
+        </option>
+
+      </select>
+
+    </div>
+
+    <div class="form-group">
+
+      <label>Origin</label>
+
+      <select
+        formControlName="origin">
+
+        <option value="">
+          All Origins
+        </option>
+
+        @for(origin of originList; track origin){
+
+        <option
+          [value]="origin">
+
+          {{ origin }}
+
+        </option>
+
+        }
+
+      </select>
+
+    </div>
+
+    <div class="form-group">
+
+      <label>
+        Destination
+      </label>
+
+      <select
+        formControlName="destination">
+
+        <option value="">
+          All Destinations
+        </option>
+
+        @for(destination of destinationList; track destination){
+
+        <option
+          [value]="destination">
+
+          {{ destination }}
+
+        </option>
+
+        }
+
+      </select>
+
+    </div>
+
+    <button
+      type="button"
+      class="reset-btn"
+      (click)="resetFilters()">
+
+      Reset Filters
+
+    </button>
+
+  </form>
+
+</div>

@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'leaflet/dist/leaflet.css';
+@import 'leaflet.markercluster/dist/MarkerCluster.css';
+@import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f4f7fb;
+  color: #1e293b;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+select {
+  font-family: inherit;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+/* DARK MODE */
+
+body.dark-theme {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+body.dark-theme .dashboard-container {
+  background: #0f172a;
+}
+
+body.dark-theme .filter-card,
+body.dark-theme .details-card,
+body.dark-theme .kpi-card,
+body.dark-theme .empty-state {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme span,
+body.dark-theme p,
+body.dark-theme label {
+  color: #f8fafc;
+}
+
+body.dark-theme input,
+body.dark-theme select {
+  background: #334155;
+  border-color: #475569;
+  color: white;
+}
+
+body.dark-theme .leaflet-popup-content-wrapper {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark-theme .leaflet-popup-tip {
+  background: #1e293b;
+}

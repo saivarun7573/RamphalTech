@@ -1,0 +1,46 @@
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.kpi-card span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.kpi-card h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.total {
+  border-left: 5px solid #2563eb;
+}
+
+.active {
+  border-left: 5px solid #16a34a;
+}
+
+.delayed {
+  border-left: 5px solid #f59e0b;
+}
+
+.arrived {
+  border-left: 5px solid #9333ea;
+}
+
+@media (max-width: 768px) {
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

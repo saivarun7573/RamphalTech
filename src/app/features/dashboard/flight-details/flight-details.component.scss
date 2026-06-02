@@ -1,0 +1,80 @@
+.details-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.delayed {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.arrived {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.detail-item span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.empty-state {
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.empty-state h3 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.empty-state p {
+  color: #64748b;
+}

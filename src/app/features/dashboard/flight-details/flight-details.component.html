@@ -1,0 +1,72 @@
+@if (flight$ | async; as flight) {
+
+<div class="details-card">
+
+  <div class="header">
+
+    <h2>
+      {{ flight.flightNumber }}
+    </h2>
+
+    <span
+      class="status"
+      [class.active]="flight.status === 'Active'"
+      [class.delayed]="flight.status === 'Delayed'"
+      [class.arrived]="flight.status === 'Arrived'">
+
+      {{ flight.status }}
+
+    </span>
+
+  </div>
+
+  <div class="details-grid">
+
+    <div class="detail-item">
+      <label>Callsign</label>
+      <span>{{ flight.callsign }}</span>
+    </div>
+
+    <div class="detail-item">
+      <label>Aircraft</label>
+      <span>{{ flight.aircraftType }}</span>
+    </div>
+
+    <div class="detail-item">
+      <label>Origin</label>
+      <span>{{ flight.origin }}</span>
+    </div>
+
+    <div class="detail-item">
+      <label>Destination</label>
+      <span>{{ flight.destination }}</span>
+    </div>
+
+    <div class="detail-item">
+      <label>ETD</label>
+      <span>{{ flight.etd }}</span>
+    </div>
+
+    <div class="detail-item">
+      <label>ETA</label>
+      <span>{{ flight.eta }}</span>
+    </div>
+
+  </div>
+
+</div>
+
+} @else {
+
+<div class="empty-state">
+
+  <h3>Select a Flight</h3>
+
+  <p>
+    Click a flight marker on the map
+    to view operational details.
+  </p>
+
+</div>
+
+}
